@@ -1,4 +1,5 @@
 //TIMER
+console.log("timer.js connected");
 
 var time = document.getElementById('timer');
 var start = document.getElementById('start');
