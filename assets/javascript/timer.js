@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-$(document).ready(function(){
-    $('ul.tabs').tabs({
-      swipeable : false,
-      responsiveThreshold : 1920
-    });
-  });
-=======
 //TIMER
+console.log("timer.js connected");
 
 var time = document.getElementById('timer');
 var start = document.getElementById('start');
@@ -75,4 +68,3 @@ $("#stop").on("click", function() {
 
  });
  //End of TIMER
->>>>>>> 1864438f75301453243ae0e25cd6e26f166cf64f
