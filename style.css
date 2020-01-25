@@ -1,0 +1,47 @@
+*{
+	box-sizing: border-box;
+}
+.logo {
+	position: relative;
+	display: block;
+	width: 120px;
+	height: 120px;
+	background: rgba(255,255,255,1); 
+	transition: all 368ms ease-in 0s;
+}
+.logo-apple {
+	position: absolute;
+	display: block;
+	width: 120px;
+	height: 120px;
+	background: rgb(21, 87, 15);
+	border-radius: 50%;
+}
+.logo-apple-bite {
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	background: rgba(255,255,255,1);
+	border-radius: 50%;
+}
+.logo-apple-bite-1 {
+	left: -70px;
+}
+.logo-apple-bite-2 {
+	right: -70px;
+}
+.logo-worm {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: rgba(59, 219, 191, 1);
+	border-radius: 50%;
+	top: 45px;
+	transition: all 368ms  ease-in 0s;
+}
+.logo-worm-1 {
+	left: 0;
+}
+.logo-worm-2 {
+	right: 0;
+}
