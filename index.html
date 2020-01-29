@@ -14,8 +14,29 @@
     <body>
         <div class="container">
             <nav>
-                <div class="nav-wrapper ">
-                  <a href="#" class="brand-logo grey lighten-3">StudyWorm</a>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo center">
+                            <div class="logo">
+                            <div class="logo__apple"></div>
+                            <div class="logo__apple-bite logo__apple-bite--1"></div>
+                            <div class="logo__apple-bite logo__apple-bite--2"></div>
+                            <div class="logo__worm logo__worm--1"></div>
+                            <div class="logo__worm logo__worm--2"></div>
+                            </div>
+                    </a>
+                    <div class="col s12 m8 offset-m2 l6 offset-l3 right">
+                        <div class="card-panel grey lighten-5 z-depth-1">
+                              <div class="row valign-wrapper">
+                                <div class="col s2">
+                                  <img src="assets/images/dog.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                </div>
+                                <div class="col s10">
+                                  <span class="black-text">Profile</span>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    
                   
                 </div>
               </nav>
@@ -31,12 +52,13 @@
                    
                 <div id="swipe-1" class="col s12">
                     <div class="row">
-                        <div class="col s12">
-                            <h3>Your Timer</h3>
+                        <div class="col s12" id="timer">
+                            <h2>00:00:00</h2>
+                            <a class="waves-effect waves-light btn" id="timerButton">Start/Stop</a>
                         </div>
                     </div>
-                            <div class="row">
-                                <div class="col s12" id="timer"></div>
+                           <div class="row">
+                                <div class="col s12" id="progress"></div>
                             </div>
                 </div>
                                 <form class="col s12" id="swipe-2">
@@ -61,7 +83,8 @@
             <div class="container">
               <div class="row">
                 <div class="col l6 s12">
-                  <h5 class="black-text">Footer Content</h5>
+                  
+                  <i class="material-icons">mail</i>
               </div>
           </footer>
     </div>
@@ -80,12 +103,8 @@
 
         <!--App script-->
         <script type="text/javascript" src="assets/javascript/logic.js"></script>
-<<<<<<< HEAD
+        <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
        
-=======
-
-        
->>>>>>> 1864438f75301453243ae0e25cd6e26f166cf64f
     </body>
 </html>
         

@@ -1,43 +1,134 @@
 nav{
     background-color: white;
     color: black;
+    height: 130px;
 }
+body{
+    background-color: #bdbdbd;
+}
+.container{
+    background-color: #eeeeee;
+}
+.main{
+    margin-top: 10px;
+}
+.tabs .tab a:visited{
+    color:  rgba(0,255,0,1);
+    background-color: rgba(255,255,255,1);
+}
+.tabs .indicator{
+    color:  rgba(0,255,0,1);
+    background-color: rgba(0,255,0,1);
+}
+.tabs .tab a{
+    background-color: rgba(255,255,255,1);
+    color:  rgba(0,255,0,1);
+}
+.tabs .tab a.active, .tabs .tab a:hover .tabs .tab a:focus{
+    color:  rgba(0,255,0,1);
+    background-color: rgba(255,255,255,1);
+}
+
+
+
     
-a.brand-logo{
-    color: black;
-}
+
 .page-footer{
     background-color: white;
-    border: 2px solid black;
+
     color: black;
 }
 #swipe-2{
-    border: 2px solid black;
+    border: 1px solid black;
     height: 60vh;
 }
 #swipe-1{
-    border: 2px solid black;
+    
     height: 60vh;
+    
 }
 li{
     color: black;
-    border: 2px solid black;
+}
+.card-panel{
+    padding: 0px;
+    margin-right: 10px;
+    width: 200px;
+}
+.row .col.s2{
+    width: 33.3%;
+    padding-top: 20px;
+}
+.row .col.s10{
+    width: 66.6%;
+}
+.col .row{
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
 
-}
-.tabs .tab a{
-    color: black;
-}
 
-#progressBars{
-    border: 1px solid black;
-    height: 200px;
-    margin-top: 100px;
-}
+
 #timer{
-    border: 1px solid black;
-    height: 200px;
-    margin-top: 100px;
+    
+    font-size: 50px;
+    text-align: center;
+}
+.btn{
+    background-color:  rgba(0,255,0,1);
 }
 .carousel .carousel-item{
     width:100%;
   }
+
+.nav-wrapper{
+    padding-top: 10px;
+}
+.material-icons{
+    font-size: 40px;
+}
+
+.logo {
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: rgba(255,255,255,1); 
+	transition: all 368ms ease-in 0s;
+}
+.logo__apple {
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 100px;
+	background:#218715;
+	border-radius: 50%;
+}
+.logo__apple-bite {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background: white;
+	border-radius: 50%;
+}
+.logo__apple-bite--1 {
+	left: -60px;
+}
+.logo__apple-bite--2 {
+	right: -60px;
+}
+.logo__worm {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: rgba(0,255,0,1);
+	border-radius: 50%;
+	top: 45px;
+	transition: all 368ms  ease-in 0s;
+}
+.logo__worm--1 {
+	left: 0;
+}
+.logo__worm--2 {
+	right: 0;
+}
