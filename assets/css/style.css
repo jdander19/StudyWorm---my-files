@@ -29,14 +29,13 @@ body{
     background-color: rgba(255,255,255,1);
 }
 
-
-
-    
-
 .page-footer{
     background-color: white;
-
     color: black;
+   
+}
+#footer{
+    margin-bottom: 20px;
 }
 #swipe-2{
     border: 1px solid black;
@@ -47,9 +46,7 @@ body{
     height: 60vh;
     
 }
-li{
-    color: black;
-}
+
 .card-panel{
     padding: 0px;
     margin-right: 10px;
