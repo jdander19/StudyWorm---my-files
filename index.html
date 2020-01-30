@@ -4,7 +4,7 @@
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet prefetch" />
         <link type="text/css" rel="stylesheet" href="assets/css/style.css">
         <link type="text/css" rel="stylesheet" href="assets/css/materialize-social.css">
         <!--Let browser know website is optimized for mobile-->
@@ -43,9 +43,9 @@
         <div class="main">
             <div class="row">
                 <div class="col s12">
-                    <ul id="tabs-swipe" class="tabs grey-text text-darken-4">
+                    <ul id="tabs-swipe-demo" class="tabs">
                         <li class="tab col s3"><a href="#swipe-1">Progress</a></li>
-                        <li class="tab col s3"><a href="#swipe-2">Study Goals</a></li>
+                        <li class="tab col s3"><a class="active"href="#swipe-2">Study Goals</a></li>
                         <li class="tab col s3"><a href="#swipe-3">Study Help</a></li>
                         <li class="tab col s3"><a href="#swipe-4">Study Spots</a></li>
                       </ul>
@@ -107,21 +107,24 @@
           </footer>
     </div>
 
-        <!-- Firebase -->
-        <script src="/__/firebase/7.7.0/firebase-app.js"></script>
-        <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
-        <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
-        <script src="/__/firebase/init.js"></script>    
+      
         
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"> </script>
 
-        <!--App script-->
+         <!--App script-->
         <script type="text/javascript" src="assets/javascript/logic.js"></script>
-        <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+      
+         <!-- Firebase -->
+         <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+         <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
+         <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+         <script src="/__/firebase/init.js"></script>    
+
+        
        
     </body>
 </html>
