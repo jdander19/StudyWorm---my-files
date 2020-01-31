@@ -1,7 +1,6 @@
 $(document).ready(function(){
     $('ul.tabs').tabs({
-      swipeable : true,
-      responsiveThreshold : Infinity
-
+      swipeable : false,
+      responsiveThreshold : 1920
     });
   });
