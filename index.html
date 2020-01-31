@@ -15,16 +15,30 @@
 
     <body>
         <div class="container">
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                   <h4 id="dialog-title">Log In</h4>
+                   <form>
+                        <input type="email" id="username" class="validate">
+                        <label for="username">Username</label>
+                        <input type="password" id="password" class="validate">
+                        <label for="password">Password</label>
+                    </form> 
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" id="submit" class="modal-action modal-close waves-effect waves-green btn-flat">Enter</a>
+                </div>
+            </div>
             <nav>
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo center">
-                            <div class="logo">
-                            <div class="logo__apple"></div>
-                            <div class="logo__apple-bite logo__apple-bite--1"></div>
-                            <div class="logo__apple-bite logo__apple-bite--2"></div>
-                            <div class="logo__worm logo__worm--1"></div>
-                            <div class="logo__worm logo__worm--2"></div>
-                            </div>
+                        <div class="logo">
+                        <div class="logo__worm"></div>
+                        <div class="logo__worm-eye logo__worm-eye--1"></div>
+                        <div class="logo__worm-eye logo__worm-eye--2"></div>
+                        <div class="logo__pupil logo__pupil--1"></div>
+                        <div class="logo__pupil logo__pupil--2"></div>
+                        </div>
                     </a>
                     <div class="col s12 m8 offset-m2 l6 offset-l3 right">
                         <div class="card-panel grey lighten-5 z-depth-1">
@@ -117,6 +131,7 @@
 
          <!--App script-->
         <script type="text/javascript" src="assets/javascript/logic.js"></script>
+        <script type="text/javascript" src="assets/javascript/modal.js"></script>
       
          <!-- Firebase -->
          <script src="/__/firebase/7.7.0/firebase-app.js"></script>
