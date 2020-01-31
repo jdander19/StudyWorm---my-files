@@ -121,3 +121,8 @@ footer.page-footer{
 .logo__worm--2 {
 	right: 0;
 }
+#trafficSection {
+    height: 400px;
+    width: 1200px;
+    position: fixed;
+}
