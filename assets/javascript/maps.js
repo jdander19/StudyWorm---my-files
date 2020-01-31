@@ -1,32 +1,3 @@
-$(document).ready(function(){
-    $('ul.tabs').tabs({
-      swipeable : false,
-      responsiveThreshold : 1920
-    });
-
-$("#pause").on("click", function(){
-    clearTimeout(t);
-    $("#start").empty().append("Start");
-});
-
-$("#stop").on("click", function() {
-
-    console.log("seconds: " + seconds + " minutes: " + minutes + " hours: " + hours);
-    //send the values to go get added
-    sum(hours, minutes, seconds);
-    //console.log("stop");
-    $("#start").empty().append("Start");
-    clearInterval(t);
-    time.textContent = "00:00:00";
-    seconds = 0;
-    minutes = 0;
-    hours = 0;
-
-
-});
-//End of TIMER
-
- 
 //MAPS - Google map api init.
 function initMap () {
     var utCampus = { lat: 30.2849, lng: 97.7341 };
@@ -95,5 +66,3 @@ function initMap () {
      initMap();
 });
 // END OF MAP
-  });
-
