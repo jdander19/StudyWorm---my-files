@@ -5,39 +5,90 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+        rel="stylesheet prefetch" />
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize-social.css">
     <!--Let browser know website is optimized for mobile-->
+    <script src="https://kit.fontawesome.com/bc32bf89b6.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StudyWorm</title>
 </head>
 
 <body>
+
+
+
+
+
+
+
+
+
+    <!-- MODAL INSERT START *********************************-->
+
+
+
+    <!-- MODAL INSERT END ***********************************-->
+
+
+
+
+
+
     <div class="container">
         <nav>
-            <div class="nav-wrapper ">
-                <a href="#" class="brand-logo grey lighten-3">StudyWorm</a>
-
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">
+                    <div class="logo">
+                        <div class="logo__apple"></div>
+                        <div class="logo__apple-bite logo__apple-bite--1"></div>
+                        <div class="logo__apple-bite logo__apple-bite--2"></div>
+                        <div class="logo__worm logo__worm--1"></div>
+                        <div class="logo__worm logo__worm--2"></div>
+                    </div>
+                </a>
+                <div class="col s12 m8 offset-m2 l6 offset-l3 right">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="assets/images/dog.jpg" alt="" class="circle responsive-img">
+                                <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                                <span class="black-text">Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
         <div class="main">
+
+
+
+
+
+
             <div class="row">
                 <div class="col s12">
-                    <ul id="tabs-swipe" class="tabs grey-text text-darken-4">
+                    <ul id="tabs-swipe-demo" class="tabs">
                         <li class="tab col s3"><a href="#swipe-1">Progress</a></li>
-                        <li class="tab col s3"><a href="#swipe-2">Study Goals</a></li>
+                        <li class="tab col s3"><a class="active" href="#swipe-2">Study Goals</a></li>
                         <li class="tab col s3"><a href="#swipe-3">Study Help</a></li>
-                        <li class="tab col s3"><a href="#swipe-4">Study Spots</a></li>
+                        <li class="tab col s3"><a href="#swipe-4">Login</a></li>
                     </ul>
 
                     <div id="swipe-1" class="col s12">
                         <div class="row">
-                            <div class="col s12">
-                                <h3>Your Timer</h3>
+                            <div class="col s12" id="timer">
+                                <h2>00:00:00</h2>
+                                <a class="waves-effect waves-light btn" id="timerButton">Start/Stop</a>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col s12" id="timer"></div>
+                            <div class="col s12" id="progress"></div>
                         </div>
                     </div>
                     <form class="col s12" id="swipe-2">
@@ -52,20 +103,104 @@
                             </div>
                         </div>
                     </form>
+
+                    <div class="col" id="swipe-3">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="videoContainer">
+                                    <h3>Study Help</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="col" id="swipe-4">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="loginContainer">
+                                    <h3>Login Page</h3>
+                                    <div id="login-header">
+                                        <h4 id="dialog-title">Study Worm Login</h4>
+                                    </div>
+                                    <div id="login-info" class="container">
+                                        <label id="label-user" for="user-name"><b>Email Address</b></label>
+                                        <input id="user-name" type="text" placeholder="me@mysite.com" name="uname"
+                                            required>
+                                        <div id="password-block">
+                                            <label id="label-password" for="current-password"><b>Password</b></label>
+                                            <input id="current-password" type="password" placeholder="Enter Password"
+                                                name="psw" required>
+                                        </div>
+                                        <button type="button" id="goLogin"
+                                            class="btn btn-primary loginbutton login-item">Login</button>
+                                    </div>
+
+
+
+
+
+                                    <label id="login-checkbox" for="new-account">
+                                        <input id="new-account" class="login-item" type="checkbox" checked="checked"
+                                            name="remember"> New
+                                        Account
+                                    </label>
+
+                                    <label id="login-reset" for="reset-account"></label>
+
+                                    <input id="reset-account" class="login-item" type="checkbox" checked="checked"
+                                        name="reset"> Reset Password
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
+
+
+
             </div>
         </div>
-
-
-
-        <footer class="page-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="black-text">Footer Content</h5>
-                    </div>
-        </footer>
     </div>
+    <footer class="page-footer">
+        <div class="footer-wrapper">
+            <div class="row">
+                <div class="col l6 s12" id="footer">
+                    <a class="waves-effect waves-light btn-floating btn-large social facebook">
+                        <i class="fab fa-facebook"></i></a>
+                    <a class="waves-effect waves-light btn-floating btn-large social instagram">
+                        <i class="fab fa-instagram"></i></a>
+                    <a class="waves-effect waves-light btn-floating btn-large social twitter">
+                        <i class="fab fa-twitter"></i> </a>
+                </div>
+    </footer>
+    </div>
+
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    </script>
+    <script language="JavaScript" src="https://ssl.geoplugin.net/javascript.gp?k=207167b5568cc2a4"
+        type="text/javascript"></script>
+
+
+
+
+
 
     <!-- Firebase -->
     <script src="/__/firebase/7.7.0/firebase-app.js"></script>
@@ -73,21 +208,14 @@
     <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
     <script src="/__/firebase/init.js"></script>
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-
     <!--App script-->
-    <script language="JavaScript" src="https://ssl.geoplugin.net/javascript.gp?k=207167b5568cc2a4"
-        type="text/javascript"></script>
-    <script type="text/javascript" src="assets/javascript/user.js"></script>
-    <script type="text/javascript" src="assets/javascript/subject.js"></script>
-    <script type="text/javascript" src="assets/javascript/logic.js"></script>
-    <<<<<<< HEAD=======>>>>>>> 1864438f75301453243ae0e25cd6e26f166cf64f
+    <script src="/assets/javascript/firestore.js"></script>
+    <script src="assets/javascript/modal.js"></script>
+    <script src="assets/javascript/user.js"></script>
+    <script src="assets/javascript/subject.js"></script>
+    <script src="assets/javascript/logic.js"></script>
+
+
 </body>
 
 </html>

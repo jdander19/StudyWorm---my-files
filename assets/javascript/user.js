@@ -17,12 +17,12 @@ class User {
 
 function initUser(email) {
   user = new User(email);
-  user.ipAddress = geoplugin_request();
-  user.city = geoplugin_city();
-  user.state = geoplugin_regionName();
-  user.location = [geoplugin_latitude(),
-    geoplugin_longitude()
-  ]
+  // user.ipAddress = geoplugin_request();
+  // user.city = geoplugin_city();
+  // user.state = geoplugin_regionName();
+  // user.location = [geoplugin_latitude(),
+  // geoplugin_longitude()
+
 }
 
 initUser('me@billstephan.com');

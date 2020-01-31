@@ -1,78 +1,70 @@
-<<<<<<< HEAD
-$(document).ready(function(){
+console.log("logic.js linked");
+
+// Global Assignments
+let debug = true;
+let modalMode;
+let ipAddress;
+let password;
+let email;
+
+
+document.body.onclick = keyClick;
+
+//let user = firebase.auth().currentUser;
+
+console.log(geoplugin_request());
+
+
+
+$(document).ready(function () {
     $('ul.tabs').tabs({
-      swipeable : false,
-      responsiveThreshold : 1920
+        swipeable: false,
+        responsiveThreshold: 1920
     });
-  });
-=======
-//TIMER
+});
 
-var time = document.getElementById('timer');
-var start = document.getElementById('start');
-var pause = document.getElementById('pause');
-var stop = document.getElementById('stop');
-var seconds = 0;
-var minutes = 0;
-var hours = 0;
-var t;
-// addedTime is a decimal / float so that we could see the fractional changes
-var addedSeconds = 0, addedMinutes = 0, addedHours = 0, addedTime = 0.01, newTime = 0;
+function validateEmail(email) { // regex text email validation
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+// showModal();
 
 
-function add()
-{
-    seconds++;
-    if (seconds >= 60)
-    {
-        seconds = 0;
-        minutes++;
-        if (minutes >= 60)
-        {
-            minutes = 0;
-            hours++;
+
+
+
+// click event
+function keyClick(e) { // looking for clicks  - wheel or on-screen keyboard
+    e = window.event ? event.srcElement : e.target;
+    if (debug) {
+        console.log("click event: " + e.getAttribute('id') + " was clicked")
+        console.log(e);
+    }
+
+    if (e.getAttribute('id') === 'login') {
+        if (debug) {
+            console.log("validated login click: " + e.getAttribute('id') + " was processed")
+        }
+        if (document.getElementById("login").value = "Login") {
+            showModal();
+        }
+        if (document.getElementById("login").value = "Logout") {
+            // sign out via top nav
+            password = "";
+            firebase.auth().signOut().then(function () {
+                document.getElementById("login").value = "Login";
+                console.log("Sign-out successful.");
+            }).catch(function (error) {
+                console.log("Sign-out error");
+            });
+
         }
     }
 
-    time.innerHTML = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") +
-        ":" + (seconds > 9 ? seconds : "0" + seconds);
 
-    timer();
+    if (e.classList.contains("login-item")) {
+        loginClick(e);
+    }
+    return;
 }
-
-function timer()
-{
-      t = setTimeout(add, 1000);
-}
-
-
-$("#start").on("click", function(event) {
-        event.preventDefault();
-        $("#start").empty().append("Start");
-        clearTimeout(t);
-        timer();
-        console.log("Start");
-    });
-
-$("#pause").on("click", function(){
-    clearTimeout(t);
-    $("#start").empty().append("Start");
-});
-
-$("#stop").on("click", function() {
-
-    console.log("seconds: " + seconds + " minutes: " + minutes + " hours: " + hours);
-    //send the values to go get added
-    sum(hours, minutes, seconds);
-    //console.log("stop");
-    $("#start").empty().append("Start");
-    clearInterval(t);
-    time.textContent = "00:00:00";
-    seconds = 0;
-    minutes = 0;
-    hours = 0;
-
-
- });
- //End of TIMER
->>>>>>> 1864438f75301453243ae0e25cd6e26f166cf64f

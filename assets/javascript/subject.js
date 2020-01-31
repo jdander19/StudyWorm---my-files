@@ -19,7 +19,7 @@ function initSubject(subjectName, goal) {
         new Subject(subjectName, goal)
     } else {
         console.log("subject already exists"); // reject notice
-        alert("need subject exists notificaion!");
+        alert("need subject exists notification!");
     }
 
 }
