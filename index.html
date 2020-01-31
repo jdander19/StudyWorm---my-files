@@ -4,66 +4,128 @@
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet prefetch" />
         <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/materialize-social.css">
         <!--Let browser know website is optimized for mobile-->
+        <script src="https://kit.fontawesome.com/bc32bf89b6.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>StudyWorm</title>
     </head>
 
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <header>
-                        <h3>StudyWorm</h3>
-                    </header>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo center">
+                            <div class="logo">
+                            <div class="logo__apple"></div>
+                            <div class="logo__apple-bite logo__apple-bite--1"></div>
+                            <div class="logo__apple-bite logo__apple-bite--2"></div>
+                            <div class="logo__worm logo__worm--1"></div>
+                            <div class="logo__worm logo__worm--2"></div>
+                            </div>
+                    </a>
+                    <div class="col s12 m8 offset-m2 l6 offset-l3 right">
+                        <div class="card-panel grey lighten-5 z-depth-1">
+                              <div class="row valign-wrapper">
+                                <div class="col s2">
+                                  <img src="assets/images/dog.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                </div>
+                                <div class="col s10">
+                                  <span class="black-text">Profile</span>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="main">
+              </nav>
+        <div class="main">
             <div class="row">
                 <div class="col s12">
-                    <ul id="tabs-swipe" class="tabs">
+                    <ul id="tabs-swipe-demo" class="tabs">
                         <li class="tab col s3"><a href="#swipe-1">Progress</a></li>
-                        <li class="tab col s3"><a class="active" href="#swipe-2">Study Goals</a></li>
+                        <li class="tab col s3"><a class="active"href="#swipe-2">Study Goals</a></li>
                         <li class="tab col s3"><a href="#swipe-3">Study Help</a></li>
                         <li class="tab col s3"><a href="#swipe-4">Study Spots</a></li>
                       </ul>
-                      <div id="swipe-1" class="col s12">
-                          <div class="row">
-                              <div class="col s12">
-                                  <div id="progressBars">Progress bars go here</div>
-                              </div>
-                          </div>
-                      </div>
                    
+                <div id="swipe-1" class="col s12">
+                    <div class="row">
+                        <div class="col s12" id="timer">
+                            <h2>00:00:00</h2>
+                            <a class="waves-effect waves-light btn" id="timerButton">Start/Stop</a>
+                        </div>
+                    </div>
+                        <div class="row">
+                                <div class="col s12" id="progress"></div>
+                        </div>
+                </div>
+                <form class="col s12" id="swipe-2">
+                    <div class="row">
+                        <div class="input-field col s5">
+                            <input  id="subject" type="text" class="validate">
+                            <label for="first_name">Subject</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Number of hours</label>
+                        </div>
+                        </div>
+                </form>
+                
+                <div class="col" id="swipe-3">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="videoContainer">
+                                <h3>Study Help</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="swipe-4">
+                    <div class="row">
+                        <div class="col s12" id="mapContainer">
+                            <h3>Study Spots</h3>                            
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
         <footer class="page-footer">
-            <div class="container">
+            <div class="footer-wrapper">
               <div class="row">
-                <div class="col l6 s12">
-                  <h5 class="black-text">Footer Content</h5>
-              </div>
+                <div class="col l6 s12" id="footer">
+                    <a class="waves-effect waves-light btn-floating btn-large social facebook">
+                        <i class="fab fa-facebook"></i></a>
+                    <a class="waves-effect waves-light btn-floating btn-large social instagram">
+                        <i class="fab fa-instagram"></i></a>
+                    <a class="waves-effect waves-light btn-floating btn-large social twitter">
+                        <i class="fab fa-twitter"></i> </a>
+                </div>
           </footer>
     </div>
 
-        <!-- Firebase -->
-        <script src="/__/firebase/7.7.0/firebase-app.js"></script>
-        <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
-        <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
-        <script src="/__/firebase/init.js"></script>    
+      
         
         <!--JavaScript at end of body for optimized loading-->
-        <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"> </script>
 
-        <!--App script-->
+         <!--App script-->
         <script type="text/javascript" src="assets/javascript/logic.js"></script>
+      
+         <!-- Firebase -->
+         <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+         <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
+         <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+         <script src="/__/firebase/init.js"></script>    
 
         
+       
     </body>
 </html>
         
