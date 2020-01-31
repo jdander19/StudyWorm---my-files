@@ -19,14 +19,18 @@
                 <div class="modal-content">
                    <h4 id="dialog-title">Log In</h4>
                    <form>
-                        <input type="email" id="username" class="validate">
+                        <input type="email" id="user-name" class="validate">
                         <label for="username">Username</label>
-                        <input type="password" id="password" class="validate">
+                        <input type="password" id="current-password" class="validate">
                         <label for="password">Password</label>
                     </form> 
                 </div>
                 <div class="modal-footer">
-                    <a href="#!" id="submit" class="modal-action modal-close waves-effect waves-green btn-flat">Enter</a>
+                    <input type="checkbox" id="new-account"/>
+                    <label for="checkbox">Create New User</label>
+                    <input type="checkbox" id="reset-account"/>
+                    <label for="checkbox">Reset</label>
+                    <a href="#!" id="submit" class="modal-action modal-close waves-effect waves-light btn">Enter</a>
                 </div>
             </div>
             <nav>
@@ -117,6 +121,8 @@
                         <i class="fab fa-instagram"></i></a>
                     <a class="waves-effect waves-light btn-floating btn-large social twitter">
                         <i class="fab fa-twitter"></i> </a>
+                    <a data-target="modal" class="waves-effect waves-light btn" id="loginButton">Log In</a>
+
                 </div>
           </footer>
     </div>

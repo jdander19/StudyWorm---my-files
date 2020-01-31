@@ -4,4 +4,6 @@ $(document).ready(function(){
       responsiveThreshold : Infinity
 
     });
+    $('#modal').modal();
+    $('#modal').modal('open'); 
   });
