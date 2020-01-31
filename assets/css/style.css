@@ -50,13 +50,13 @@ label{
     padding: 0px;
     margin-right: 10px;
     width: 200px;
+    position: relative;
 }
-.row .col.s2{
-    width: 33.3%;
-    padding-top: 20px;
+img.responsive-img{
+    margin: 15px 0 0 15px;
 }
-.row .col.s10{
-    width: 66.6%;
+.row{
+    margin-bottom: 0;
 }
 .col .row{
     margin-left: 1.25rem;
@@ -75,13 +75,11 @@ label{
     background-color:  rgba(0,255,0,1);
     font-size: 10px;
     margin-right: 10px;
+    margin-top: 10px;
 }
 #submit{
     margin: 0 10px 10px 0;
     font-size: 15px;
-}
-#new-account, #reset-account{
-    padding: 10px;
 }
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked{
     position: relative;
@@ -149,5 +147,14 @@ label{
 @media only screen and (max-width: 660px) {
     .card-panel{
         width: 100px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .logo__worm-eye--2{
+        z-index: 0;
+    }
+    .card-panel{
+        z-index: 100;
+        margin-right: 0;
     }
 }
