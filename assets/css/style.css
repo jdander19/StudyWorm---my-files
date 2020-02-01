@@ -5,6 +5,8 @@ nav{
 }
 body{
     background-color: #bdbdbd;
+
+
 }
 .container{
     background-color: #eeeeee;
@@ -47,6 +49,22 @@ footer.page-footer{
     margin-right: 10px;
     width: 200px;
 }
+@media only screen and (max-width: 800px) {
+    [class="card-panel grey lighten-5 z-depth-1"] {width: 100px;
+      }
+  }
+  @media only screen and (max-width: 525px) {
+    [class="card-panel grey lighten-5 z-depth-1"] {width: 50px;
+      }
+  }
+@media only screen and (max-width: 800px) {
+    [class="col s12 m8 offset-m2 l6 offset-l3 right"] {width: 100px;
+      }
+  }
+  @media only screen and (max-width: 525px) {
+    [class="col s12 m8 offset-m2 l6 offset-l3 right"] {width: 50px;
+      }
+  }
 .row .col.s2{
     width: 33.3%;
     padding-top: 20px;
@@ -85,7 +103,7 @@ footer.page-footer{
 	background: rgba(255,255,255,1); 
 	transition: all 368ms ease-in 0s;
 }
-.logo__apple {
+.logo__worm {
 	position: absolute;
 	display: block;
 	width: 100px;
@@ -93,20 +111,20 @@ footer.page-footer{
 	background:#218715;
 	border-radius: 50%;
 }
-.logo__apple-bite {
+.logo__worm-eye {
 	position: absolute;
 	width: 100px;
 	height: 100px;
 	background: white;
 	border-radius: 50%;
 }
-.logo__apple-bite--1 {
+.logo__worm-eye--1 {
 	left: -60px;
 }
-.logo__apple-bite--2 {
+.logo__worm-eye--2 {
 	right: -60px;
 }
-.logo__worm {
+.logo__pupil {
 	position: absolute;
 	width: 30px;
 	height: 30px;
@@ -115,9 +133,9 @@ footer.page-footer{
 	top: 45px;
 	transition: all 368ms  ease-in 0s;
 }
-.logo__worm--1 {
+.logo__pupil--1 {
 	left: 0;
 }
-.logo__worm--2 {
+.logo__pupil--2 {
 	right: 0;
 }

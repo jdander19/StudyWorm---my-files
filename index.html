@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,30 +15,46 @@
 
     <body>
         <div class="container">
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                   <h4 id="dialog-title">Log In</h4>
+                   <form>
+                        <input type="email" id="user-name" class="validate">
+                        <label for="username">Username</label>
+                        <input type="password" id="current-password" class="validate">
+                        <label for="password">Password</label>
+                    </form> 
+                </div>
+                <div class="modal-footer">
+                    <input type="checkbox" id="new-account"/>
+                    <label for="checkbox">Create New User</label>
+                    <input type="checkbox" id="reset-account"/>
+                    <label for="checkbox">Reset</label>
+                    <a href="#!" id="submit" class="modal-action modal-close waves-effect waves-light btn">Enter</a>
+                </div>
+            </div>
             <nav>
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo center">
-                            <div class="logo">
-                            <div class="logo__apple"></div>
-                            <div class="logo__apple-bite logo__apple-bite--1"></div>
-                            <div class="logo__apple-bite logo__apple-bite--2"></div>
-                            <div class="logo__worm logo__worm--1"></div>
-                            <div class="logo__worm logo__worm--2"></div>
-                            </div>
+                        <div class="logo">
+                        <div class="logo__worm"></div>
+                        <div class="logo__worm-eye logo__worm-eye--1"></div>
+                        <div class="logo__worm-eye logo__worm-eye--2"></div>
+                        <div class="logo__pupil logo__pupil--1"></div>
+                        <div class="logo__pupil logo__pupil--2"></div>
+                        </div>
                     </a>
-                    <div class="col s12 m8 offset-m2 l6 offset-l3 right">
-                        <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="card-panel grey lighten-5 z-depth-2 right">
                               <div class="row valign-wrapper">
-                                <div class="col s2">
-                                  <img src="assets/images/dog.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                <div class="col s4">
+                                  <img src="assets/images/dog.jpg" alt="" class="circle responsive-img">
                                 </div>
-                                <div class="col s10">
+                                <div class="col s8">
                                   <span class="black-text">Profile</span>
                                 </div>
                               </div>
                         </div>
                     </div>
-                </div>
               </nav>
         <div class="main">
             <div class="row">
@@ -59,7 +74,7 @@
                         </div>
                     </div>
                         <div class="row">
-                                <div class="col s12" id="progress"></div>
+                            <div class="col s12" id="progress"></div>
                         </div>
                 </div>
                 <form class="col s12" id="swipe-2">
@@ -104,6 +119,8 @@
                         <i class="fab fa-instagram"></i></a>
                     <a class="waves-effect waves-light btn-floating btn-large social twitter">
                         <i class="fab fa-twitter"></i> </a>
+                    <a data-target="modal" class="waves-effect waves-light btn" id="loginButton">Log In</a>
+
                 </div>
           </footer>
     </div>
@@ -118,5 +135,16 @@
 
          <!--App script-->
         <script type="text/javascript" src="assets/javascript/logic.js"></script>
+        <script type="text/javascript" src="assets/javascript/modal.js"></script>
+      
+         <!-- Firebase -->
+         <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+         <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
+         <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+         <script src="/__/firebase/init.js"></script>    
 
+        
+       
+    </body>
 </html>
+        
