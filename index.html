@@ -75,97 +75,111 @@
                         <li class="tab col s3"><a href="#swipe-4">Study Spots</a></li>
                     </ul>
 
+
+
+
                     <div id="swipe-1" class="col s12">
+
+
                         <div class="row">
                             <div class="col s12" id="timer">
-                                <h2>00:00:00</h2>
-                                <a class="waves-effect waves-light btn" id="timerButton">Start/Stop</a>
+                                <div id="display">
+                                    <h2>00:00:00</h2>
+                                </div>
+                                <div id="buttons">
+                                    <button class="waves-effect waves-light btn" id="start">Start</button>
+                                    <button class="waves-effect waves-light btn" id="pause">Pause</button>
+                                    <!-- <a class="waves-effect waves-light btn" id="start">Reset</a> -->
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col s12" id="progress"></div>
                         </div>
-                    </div>
-                    <form class="col s12" id="swipe-2">
-                        <div class="row">
-                            <div class="input-field col s5">
-                                <input id="subject" type="text" class="validate">
-                                <label for="subject">Subject</label>
-                            </div>
-                            <div class="input-field col s5">
-                                <input id="numOfHours" type="text" class="validate">
-                                <label for="numOfHours">Number of hours</label>
-                            </div>
-                        </div>
-                    </form>
-                    <row>
 
-                    </row>
-                    <div class="col" id="swipe-3">
-                        <div class="row">
-                            <div class="col s12">
-                                <div class="videoContainer">
-                                    <h3>Study Help</h3>
+
+
+                        <form class="col s12" id="swipe-2">
+                            <div class="row">
+                                <div class="input-field col s5">
+                                    <input id="subject" type="text" class="validate">
+                                    <label for="subject">Subject</label>
+                                </div>
+                                <div class="input-field col s5">
+                                    <input id="numOfHours" type="text" class="validate">
+                                    <label for="numOfHours">Number of hours</label>
+                                </div>
+                            </div>
+                        </form>
+                        <row>
+
+                        </row>
+                        <div class="col" id="swipe-3">
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="videoContainer">
+                                        <h3>Study Help</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col" id="swipe-4">
-                        <div class="row">
-                            <div class="col s12" id="mapContainer">
-                                <h3>Study Spots</h3>
-                                <div id="trafficSection" class="container"></div>
+                        <div class="col" id="swipe-4">
+                            <div class="row">
+                                <div class="col s12" id="mapContainer">
+                                    <h3>Study Spots</h3>
+                                    <div id="trafficSection" class="container"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <footer class="page-footer">
+                <div class="footer-wrapper">
+                    <div class="row">
+                        <div class="col l6 s12" id="footer">
+                            <a class="waves-effect waves-light btn-floating btn-large social facebook">
+                                <i class="fab fa-facebook"></i></a>
+                            <a class="waves-effect waves-light btn-floating btn-large social instagram">
+                                <i id="insta-icon" class="fab fa-instagram"></i></a>
+                            <a class="waves-effect waves-light btn-floating btn-large social twitter">
+                                <i id="twit-icon" class="fab fa-twitter"></i> </a>
+                            <a data-target="#" id="loginButton" class="waves-effect waves-light btn"
+                                id="loginButton">Log
+                                In</a>
+                        </div>
+            </footer>
         </div>
-        <footer class="page-footer">
-            <div class="footer-wrapper">
-                <div class="row">
-                    <div class="col l6 s12" id="footer">
-                        <a class="waves-effect waves-light btn-floating btn-large social facebook">
-                            <i class="fab fa-facebook"></i></a>
-                        <a class="waves-effect waves-light btn-floating btn-large social instagram">
-                            <i id="insta-icon" class="fab fa-instagram"></i></a>
-                        <a class="waves-effect waves-light btn-floating btn-large social twitter">
-                            <i id="twit-icon" class="fab fa-twitter"></i> </a>
-                        <a data-target="#" id="loginButton" class="waves-effect waves-light btn" id="loginButton">Log
-                            In</a>
-                    </div>
-        </footer>
-    </div>
 
-    <!-- Firebase scripts -->
-    <script src="/__/firebase/7.7.0/firebase-app.js"></script>
-    <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
-    <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
-    <script src="/__/firebase/init.js"></script>
+        <!-- Firebase scripts -->
+        <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+        <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
+        <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+        <script src="/__/firebase/init.js"></script>
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-    <!-- Materialize script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <!-- Geo-Plugin API -->
-    <script src="https://ssl.geoplugin.net/javascript.gp?k=207167b5568cc2a4" type="text/javascript"></script>
-    <!-- Google Maps API-->
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbsSFQTsfLLJJS0UMxbT2Trj-fuDqKz1A&callback=initMap">
-    </script>
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+        <!-- Materialize script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+        <!-- Geo-Plugin API -->
+        <script src="https://ssl.geoplugin.net/javascript.gp?k=207167b5568cc2a4" type="text/javascript"></script>
+        <!-- Google Maps API-->
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbsSFQTsfLLJJS0UMxbT2Trj-fuDqKz1A&callback=initMap">
+        </script>
 
-    <!-- App scripts -->
-    <script src="assets/javascript/maps.js"></script>
-    <script src="assets/javascript/firestore.js"></script>
-    <script src="assets/javascript/users.js"></script>
-    <script src="assets/javascript/subject.js"></script>
-    <script src="assets/javascript/tools.js"></script>
-    <script src="assets/javascript/login.js"></script>
-    <script src="assets/javascript/timer.js"></script>
-    <script src="assets/javascript/logic.js"></script>
+        <!-- App scripts -->
+        <script src="assets/javascript/maps.js"></script>
+        <script src="assets/javascript/firestore.js"></script>
+        <script src="assets/javascript/users.js"></script>
+        <script src="assets/javascript/subject.js"></script>
+        <script src="assets/javascript/tools.js"></script>
+        <script src="assets/javascript/login.js"></script>
+        <script src="assets/javascript/timer.js"></script>
+        <script src="assets/javascript/logic.js"></script>
 
 </body>
 

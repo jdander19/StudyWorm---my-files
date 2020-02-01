@@ -22,11 +22,6 @@ $(document).ready(function () {
         responsiveThreshold: Infinity
     });
     $('#modal').modal();
-
-    // timer events
-    $("#pause").on("click", stop);
-    // $("#reset").on("click", reset);
-    $("#start").on("click", start);
 });
 
 // TEST *** REMOVE LATER VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
