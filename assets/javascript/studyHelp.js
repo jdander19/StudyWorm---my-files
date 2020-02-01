@@ -5,17 +5,15 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var videoList = [];
 var playerInfoList = [];
 
-function infoList(file){
+function infoList(file){//creates objects for the video
   for (var j = 0; j < file.length; j ++){
     playerInfoList[j] = {
       id: 'video' + j,
-      height: '300',
-      width: '350',
+      height: '250',
+      width: '300',
       videoId: file[j]
     };
-    console.log("player info inside: " + playerInfoList[j]);
   }
-  console.log("player info: " + playerInfoList);
 }
 
 function onYouTubeIframeAPIReady() {
