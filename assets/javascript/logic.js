@@ -1,40 +1,62 @@
 console.log("logic.js linked");
+// Javascript base code
 
 // Global Assignments
 let debug = true;
-let modalMode;
+let loginMode = "login"
 let ipAddress;
 let password;
 let email;
+let fbUid;
+let myLatLng = { // UT Austin default
+    lat: 30.28575,
+    lng: -97.72920
+};
 
-
-document.body.onclick = keyClick;
-
-//let user = firebase.auth().currentUser;
-
-console.log(geoplugin_request());
-
-
+let mySubject = new Array;
+let user = firebase.auth().currentUser;
 
 $(document).ready(function () {
     $('ul.tabs').tabs({
-        swipeable: false,
-        responsiveThreshold: 1920
+        swipeable: true,
+        responsiveThreshold: Infinity
     });
+    $('#modal').modal();
 });
 
-function validateEmail(email) { // regex text email validation
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+// TEST *** REMOVE LATER VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+let myTest = {
+    "email": "billstephan@yahoo.com",
+    "displayName": "billstephan",
+    "ipAddress": "70.122.32.121",
+    "city": "Austin",
+    "state": "Texas",
+    "location": [30.3471, -97.7609],
+    "subjects": ["Math", "Science", "French", "FSD Bootcamp"],
+    "goals": [50, 70, 20, 150],
+    "hours": [0, 0, 0, 0],
+    "subjectStartTime": [0, 0, 0, 0],
+    "subjectOpen": [false, false, false, false],
+    "accessCount": 1,
+    "tsCreated": 1580483465519,
+    "tsUpdated": 1580483465519
 }
+console.log("Test userObj myTest")
+console.log(myTest); // view test data Object
+console.log("Test IP availability: " + geoplugin_request());
+myLatLng.lat = myTest.location[0];
+myLatLng.lng = myTest.location[1];
 
-// showModal();
+//initMap(); // load map to page div 
+
+// TEST *** REMOVE LATER ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 
+// mouse click or touch listener
+document.body.onclick = keyClick;
 
-
-// click event
+// click event tree
 function keyClick(e) { // looking for clicks  - wheel or on-screen keyboard
     e = window.event ? event.srcElement : e.target;
     if (debug) {
@@ -42,29 +64,53 @@ function keyClick(e) { // looking for clicks  - wheel or on-screen keyboard
         console.log(e);
     }
 
-    if (e.getAttribute('id') === 'login') {
-        if (debug) {
-            console.log("validated login click: " + e.getAttribute('id') + " was processed")
-        }
-        if (document.getElementById("login").value = "Login") {
+
+    if (e.getAttribute('id') === 'loginButton') { // clicked #login"
+        if (document.getElementById("loginButton").value = "Login") { // if displayed text of #login = "Login"   
             showModal();
         }
-        if (document.getElementById("login").value = "Logout") {
-            // sign out via top nav
+        if (document.getElementById("loginButton").value = "Logout") { // if displayed text of #login = "Logout" 
             password = "";
-            firebase.auth().signOut().then(function () {
-                document.getElementById("login").value = "Login";
+            firebase.auth().signOut().then(function () { // Firebase sign out process
+                document.getElementById("loginButton").value = "Login";
                 console.log("Sign-out successful.");
             }).catch(function (error) {
                 console.log("Sign-out error");
             });
-
         }
     }
 
-
-    if (e.classList.contains("login-item")) {
-        loginClick(e);
+    if (e.classList.contains("login-item")) { // Branches login clicks to login.js 
+        console.log(e)
+        LoginClick(e);
     }
-    return;
+
+    if (e.getAttribute('id') === 'twit-icon') { // create usrObj Test
+        user = firebase.auth().currentUser;
+        if (debug) {
+            console.log("Rules click: " + e.getAttribute('id') + " was processed")
+        }
+        // local user area
+        user = firebase.auth().currentUser;
+        initLocalUser(user.email);
+        console.log(user);
+        fbUid = user.uid;
+        localUser.tsCreated = firebase.firestore.Timestamp.now().toMillis();
+        localUser.tsUpdated = firebase.firestore.Timestamp.now().toMillis();
+
+        // subject data
+        initSubject("Math", 50);
+        initSubject("Science", 70);
+        initSubject("French", 20);
+        initSubject("FSD Bootcamp", 150);
+
+        for (var i = 0; i < subjectArr.length; i++) {
+            localUser.subjects.push(subjectArr[i].subject);
+            localUser.goals.push(subjectArr[i].goal);
+            localUser.hours.push(0);
+            localUser.subjectOpen.push(false);
+            localUser.subjectStartTime.push(0);
+        }
+        createUser(fbUid);
+    }
 }

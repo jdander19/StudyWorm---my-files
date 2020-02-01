@@ -40,33 +40,38 @@ body {
 footer.page-footer {
     background-color: white;
     color: black;
+    padding-left: 10px;
 }
 
 #footer {
     margin-bottom: 20px;
 }
 
+label {
+    color: black;
+}
+
 #swipe-2 {
-    height: 60vh;
+    height: 50vh;
 }
 
 #swipe-1 {
-    height: 60vh;
+    height: 50vh;
 }
 
 .card-panel {
     padding: 0px;
     margin-right: 10px;
     width: 200px;
+    position: relative;
 }
 
-.row .col.s2 {
-    width: 33.3%;
-    padding-top: 20px;
+img.responsive-img {
+    margin: 15px 0 0 15px;
 }
 
-.row .col.s10 {
-    width: 66.6%;
+.row {
+    margin-bottom: 0;
 }
 
 .col .row {
@@ -82,6 +87,24 @@ footer.page-footer {
 .btn {
     background-color: rgba(0, 255, 0, 1);
     font-size: 20px;
+}
+
+#loginButton {
+    float: right;
+    background-color: rgba(0, 255, 0, 1);
+    font-size: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#submit {
+    margin: 0 10px 10px 0;
+    font-size: 15px;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: relative;
 }
 
 .carousel .carousel-item {
@@ -105,7 +128,7 @@ footer.page-footer {
     transition: all 368ms ease-in 0s;
 }
 
-.logo__apple {
+.logo__worm {
     position: absolute;
     display: block;
     width: 100px;
@@ -114,7 +137,7 @@ footer.page-footer {
     border-radius: 50%;
 }
 
-.logo__apple-bite {
+.logo__worm-eye {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -122,15 +145,15 @@ footer.page-footer {
     border-radius: 50%;
 }
 
-.logo__apple-bite--1 {
+.logo__worm-eye--1 {
     left: -60px;
 }
 
-.logo__apple-bite--2 {
+.logo__worm-eye--2 {
     right: -60px;
 }
 
-.logo__worm {
+.logo__pupil {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -140,75 +163,39 @@ footer.page-footer {
     transition: all 368ms ease-in 0s;
 }
 
-.logo__worm--1 {
+.logo__pupil--1 {
     left: 0;
 }
 
-.logo__worm--2 {
+.logo__pupil--2 {
     right: 0;
 }
 
-
-
-
-/* Login box  */
-
-form {
-    border: 3px solid #f1f1f1;
-}
-
-#login-info {
-    margin-top: 0.5rem;
-    padding-top: 0rem;
-}
-
-input[type=text],
-input[type=password] {
+#trafficSection {
+    height: 400px;
     width: 100%;
-    padding: 0.5rem 1rem;
-    margin: 0.0rem 0rem;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    position: fixed;
 }
 
-.loginbutton {
-    height: 3rem;
-    margin: 1rem 0rem 0.4rem 0rem;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+@media only screen and (max-width: 773px) {
+    .card-panel {
+        width: 150px;
+    }
 }
 
-.loginbutton:hover {
-    opacity: 0.8;
+@media only screen and (max-width: 660px) {
+    .card-panel {
+        width: 100px;
+    }
 }
 
-#label-password {
-    margin-top: 0.5rem;
-}
+@media only screen and (max-width: 400px) {
+    .logo__worm-eye--2 {
+        z-index: 0;
+    }
 
-#login-header,
-#login-footer {
-    background-color: #f1f1f1;
-    height: 3rem;
-}
-
-#login-header {
-    padding: 0.2rem 0.5rem 0rem 0.5rem;
-}
-
-#login-footer {
-    display: flex;
-    width: 100%;
-    padding: 0.8rem 0.5rem 0rem 0.5rem;
-    justify-content: space-between;
-}
-
-#login-checkbox {
-    text-align: left;
-}
-
-#login-forgot {
-    text-align: right;
+    .card-panel {
+        z-index: 100;
+        margin-right: 0;
+    }
 }

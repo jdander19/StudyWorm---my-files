@@ -21,12 +21,4 @@ function initSubject(subjectName, goal) {
         console.log("subject already exists"); // reject notice
         alert("need subject exists notification!");
     }
-
 }
-
-initSubject("Math", 50);
-initSubject("Science", 50);
-
-for (var i = 0; i < subjectArr.length; i++) {
-    console.log(subjectArr[i]);
-} // reset gem objects

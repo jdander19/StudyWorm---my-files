@@ -1,39 +1,39 @@
-console.log("modal.js linked");
+console.log("login.js linked");
+// Login logic 
 
-
-function loginClick(e) { // click events for login modal
+function LoginClick(e) { // click events for login Login
     if (debug) {
-        console.log("modalClick function: " + e.getAttribute('id') + " was processed")
+        console.log("LoginClick function: " + e.getAttribute('id') + " was processed")
     }
 
-
     if (e.getAttribute('id') === 'new-account') { // new account clicked
-        if (e.checked) { // toggles modal box labeling new/login
-            modalMode = "new";
+        console.log(e)
+        if (e.checked) { // toggles Login box labeling new/login
+            loginMode = "new";
             document.getElementById("dialog-title").textContent = "New User";
             document.getElementById("goLogin").textContent = "Create New User";
             document.getElementById("login-reset").style.display = "none";
         } else {
-            modalMode = "login";
+            loginMode = "login";
             document.getElementById("dialog-title").textContent = "Study Worm Login";
             document.getElementById("goLogin").textContent = "Login";
-            document.getElementById("login-reset").style.display = "block";
+            document.getElementById("login-reset").style.display = "inline-block";
         }
     }
 
     if (e.getAttribute('id') === 'reset-account') { // reset account clicked
-        if (e.checked) { // toggles modal box labeling reset/login
-            modalMode = "reset";
+        if (e.checked) { // toggles Login box labeling reset/login
+            loginMode = "reset";
             document.getElementById("dialog-title").textContent = "Reset Password";
             document.getElementById("goLogin").textContent = "Send Reset Email";
             document.getElementById("login-checkbox").style.display = "none";
             document.getElementById("password-block").style.display = "none";
         } else {
-            modalMode = "login";
+            loginMode = "login";
             document.getElementById("dialog-title").textContent = "Study Worm Login";
             document.getElementById("goLogin").textContent = "Login";
-            document.getElementById("login-checkbox").style.display = "block";
-            document.getElementById("password-block").style.display = "block";
+            document.getElementById("login-checkbox").style.display = "inline-block";
+            document.getElementById("password-block").style.display = "inline-block";
         }
     }
 
@@ -41,7 +41,7 @@ function loginClick(e) { // click events for login modal
         email = document.getElementById("user-name").value;
         password = document.getElementById("current-password").value;
 
-        if (modalMode === "reset") {
+        if (loginMode === "reset") {
             if (validateEmail(email)) {
                 // password reset here
                 console.log("about to reset");
@@ -60,7 +60,7 @@ function loginClick(e) { // click events for login modal
                 alert(email + " is not a valid email address!")
             }
         }
-        if (modalMode === "new") {
+        if (loginMode === "new") {
             if (validateEmail(email) && password.length >= 6) {
                 // new account here
                 firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
@@ -70,25 +70,26 @@ function loginClick(e) { // click events for login modal
                     }
                 });
                 // verify new email address
-                var user = firebase.auth().currentUser;
-                user.sendEmailVerification().then(function () {
-                    // Email sent.
-                    hideModal()
-                }).catch(function (error) {
-                    if (debug) {
-                        console.log(errorCode)
-                        console.log(errorMessage)
-                    }
-                    // An error happened.
-                });
+                setTimeout(function () { // need a few seconds for new doc to set
+                    user = firebase.auth().currentUser;
+                    user.sendEmailVerification().then(function () {
+                        // Email sent.
+                        hideModal();
+                    }).catch(function (error) {
+                        if (debug) {
+                            console.log(errorCode)
+                            console.log(errorMessage)
+                        }
+                    });
+                }, 3000);
+
             } else {
                 alert(email + " is not a valid or password is less than 6 characters.");
             }
         }
-        if (modalMode === "login") {
+        if (loginMode === "login") {
             if (validateEmail(email) && password.length >= 6) {
                 // login here
-
                 firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
                     // Handle Errors here.
                     var errorCode = error.code;
@@ -98,8 +99,9 @@ function loginClick(e) { // click events for login modal
                         console.log(errorMessage)
                     }
                 });
-                if (debug) {
+                if (debug) { // good to go - logged in successfully  
                     console.log(firebase.auth().currentUser);
+                    hideModal();
                 }
             } else {
                 alert(email + " is not a valid or password is less than 6 characters.");
@@ -109,18 +111,18 @@ function loginClick(e) { // click events for login modal
 }
 
 function showModal() { // resets and displays modal 
-    modalMode = "login";
+    loginMode = "login";
     document.getElementById("dialog-title").textContent = "Study Worm Login";
     document.getElementById("goLogin").textContent = "Login";
     document.getElementById("new-account").checked = false;
     document.getElementById("reset-account").checked = false;
-    document.getElementById("login-checkbox").style.display = "block";
-    document.getElementById("password-block").style.display = "block";
-    document.getElementById("login-reset").style.display = "block";
+    document.getElementById("login-checkbox").style.display = "inline-block";
+    document.getElementById("password-block").style.display = "inline-block";
+    document.getElementById("login-reset").style.display = "inline-block";
     // document.getElementById("goLogin").disabled = true;
-    // $('#wormLogin').modal('show');
+    $('#modal').modal('open');
 };
 
 function hideModal() { // hides modal
-    // $('#wormLogin').modal('hide');
+    document.getElementById('modal').style.display = 'none';
 };

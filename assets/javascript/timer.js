@@ -1,27 +1,27 @@
-//TIMER
-console.log("timer.js connected");
+console.log("timer.js linked");
+// Timer functionality 
 
-var time = document.getElementById('timer');
-var start = document.getElementById('start');
-var pause = document.getElementById('pause');
-var stop = document.getElementById('stop');
+var time = document.getElementById('timerButton');
+var start = document.getElementById('timerButton');
+// var pause = document.getElementById('pause');
+var stop = document.getElementById('timerButton');
 var seconds = 0;
 var minutes = 0;
 var hours = 0;
 var t;
 // addedTime is a decimal / float so that we could see the fractional changes
-var addedSeconds = 0, addedMinutes = 0, addedHours = 0, addedTime = 0.01, newTime = 0;
+var addedSeconds = 0,
+    addedMinutes = 0,
+    addedHours = 0,
+    addedTime = 0.01,
+    newTime = 0;
 
-
-function add()
-{
+function add() {
     seconds++;
-    if (seconds >= 60)
-    {
+    if (seconds >= 60) {
         seconds = 0;
         minutes++;
-        if (minutes >= 60)
-        {
+        if (minutes >= 60) {
             minutes = 0;
             hours++;
         }
@@ -33,38 +33,33 @@ function add()
     timer();
 }
 
-function timer()
-{
-      t = setTimeout(add, 1000);
+function timer() {
+    t = setTimeout(add, 1000);
 }
 
-
-$("#start").on("click", function(event) {
-        event.preventDefault();
-        $("#start").empty().append("Start");
-        clearTimeout(t);
-        timer();
-        console.log("Start");
-    });
-
-$("#pause").on("click", function(){
+$("#timerButton").on("click", function (event) {
+    event.preventDefault();
+    $("#timerButton").empty().append("Stop");
     clearTimeout(t);
-    $("#start").empty().append("Start");
+    timer();
+    console.log("Start");
 });
 
-$("#stop").on("click", function() {
+// $("#timerButton").on("click", function () {
+//   clearTimeout(t);
+//   $("#timerButton").empty().append("Start");
+// });
+
+$("#timerButton").on("click", function () {
 
     console.log("seconds: " + seconds + " minutes: " + minutes + " hours: " + hours);
     //send the values to go get added
-    sum(hours, minutes, seconds);
+    add(hours, minutes, seconds);
     //console.log("stop");
-    $("#start").empty().append("Start");
+    $("#timerButton").empty().append("Start");
     clearInterval(t);
     time.textContent = "00:00:00";
     seconds = 0;
     minutes = 0;
     hours = 0;
-
-
- });
- //End of TIMER
+});
