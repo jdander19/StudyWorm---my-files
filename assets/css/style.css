@@ -158,3 +158,8 @@ img.responsive-img{
         margin-right: 0;
     }
 }
+#trafficSection {
+    height: 400px;
+    width: 1200px;
+    position: fixed;
+}
