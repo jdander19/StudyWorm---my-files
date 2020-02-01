@@ -37,15 +37,44 @@ body {
 	background-color: rgba(255, 255, 255, 1);
 }
 
+<<<<<<< HEAD
+footer.page-footer{
+    background-color: white;
+    color: black;
+    padding-left: 10px;
+=======
 footer.page-footer {
 	background-color: white;
 	color: black;
 	padding-left: 10px;
+>>>>>>> 5a42cc395e30f5d64f854812db054c1f5e915591
 }
 
 #footer {
 	margin-bottom: 20px;
 }
+<<<<<<< HEAD
+label{
+    color: black;
+}
+#swipe-2{
+   height: 50vh;
+}
+#swipe-1{
+    height: 50vh;
+}
+.card-panel{
+    padding: 0px;
+    margin-right: 10px;
+    width: 200px;
+    position: relative;
+}
+img.responsive-img{
+    margin: 15px 0 0 15px;
+}
+.row{
+    margin-bottom: 0;
+=======
 
 label {
 	color: black;
@@ -77,6 +106,7 @@ img.responsive-img {
 .col .row {
 	margin-left: 1.25rem;
 	margin-right: 1.25rem;
+>>>>>>> 5a42cc395e30f5d64f854812db054c1f5e915591
 }
 
 #timer {
@@ -106,9 +136,28 @@ img.responsive-img {
 [type="checkbox"]:checked {
 	position: relative;
 }
+<<<<<<< HEAD
+#loginButton{
+    float: right;
+    background-color:  rgba(0,255,0,1);
+    font-size: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+#submit{
+    margin: 0 10px 10px 0;
+    font-size: 15px;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked{
+    position: relative;
+}
+.carousel .carousel-item{
+    width:100%;
+=======
 
 .carousel .carousel-item {
 	width: 100%;
+>>>>>>> 5a42cc395e30f5d64f854812db054c1f5e915591
 }
 
 .nav-wrapper {
@@ -127,7 +176,10 @@ img.responsive-img {
 	background: rgba(255, 255, 255, 1);
 	transition: all 368ms ease-in 0s;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5a42cc395e30f5d64f854812db054c1f5e915591
 .logo__worm {
 	position: absolute;
 	display: block;
@@ -136,14 +188,26 @@ img.responsive-img {
 	background: #218715;
 	border-radius: 50%;
 }
+<<<<<<< HEAD
+.logo__worm-eye{
+=======
 
 .logo__worm-eye {
+>>>>>>> 5a42cc395e30f5d64f854812db054c1f5e915591
 	position: absolute;
 	width: 100px;
 	height: 100px;
 	background: white;
 	border-radius: 50%;
 }
+<<<<<<< HEAD
+.logo__worm-eye--1{
+	left: -60px;
+}
+.logo__worm-eye--2 {
+	right: -60px;
+}
+=======
 
 .logo__worm-eye--1 {
 	left: -60px;
@@ -153,6 +217,7 @@ img.responsive-img {
 	right: -60px;
 }
 
+>>>>>>> 5a42cc395e30f5d64f854812db054c1f5e915591
 .logo__pupil {
 	position: absolute;
 	width: 30px;
@@ -162,6 +227,33 @@ img.responsive-img {
 	top: 45px;
 	transition: all 368ms ease-in 0s;
 }
+<<<<<<< HEAD
+.logo__pupil--1 {
+	left: 0;
+}
+.logo__pupil--2 {
+	right: 0;
+}
+@media only screen and (max-width: 773px){
+    .card-panel{
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 660px) {
+    .card-panel{
+        width: 100px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .logo__worm-eye--2{
+        z-index: 0;
+    }
+    .card-panel{
+        z-index: 100;
+        margin-right: 0;
+    }
+}
+=======
 
 .logo__pupil--1 {
 	left: 0;
@@ -171,6 +263,7 @@ img.responsive-img {
 	right: 0;
 }
 
+>>>>>>> 5a42cc395e30f5d64f854812db054c1f5e915591
 #trafficSection {
 	height: 400px;
 	width: 100%;
